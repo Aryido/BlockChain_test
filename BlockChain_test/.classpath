@@ -5,5 +5,8 @@
 	<classpathentry kind="lib" path="C:/DataSource/lib/json/json-lib-2.4-jdk15.jar"/>
 	<classpathentry kind="lib" path="C:/DataSource/lib/gson/gson-2.8.4.jar"/>
 	<classpathentry kind="lib" path="C:/DataSource/lib/java-json.jar"/>
+	<classpathentry kind="lib" path="C:/DataSource/lib/bouncycastle"/>
+	<classpathentry kind="lib" path="C:/DataSource/lib/bouncycastle/bcprov-jdk15on-166.jar"/>
+	<classpathentry kind="lib" path="C:/DataSource/lib/bouncycastle/bcprov-ext-jdk15on-166.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

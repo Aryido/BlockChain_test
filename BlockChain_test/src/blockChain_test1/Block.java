@@ -1,7 +1,9 @@
-package blockChain;
+package blockChain_test1;
 
 import java.util.Date;
 import java.util.List;
+
+import blockChain_test2.EncryptMethod2;
 
 /**
  * 	區塊鏈基礎架構
@@ -12,7 +14,7 @@ public class Block {
 
 	public String previousHashCode;// 前一塊的hashCode
 
-	private List<Transaction> transactions;// 記錄各種交易
+	private List<Transaction1> transactions;// 記錄各種交易
 
 	private long timeStamp; // 以1/1/1970開始，到現今的毫秒數，為一個時間戳章
 	
@@ -22,7 +24,7 @@ public class Block {
 
 	}
 
-	public Block(List<Transaction> transactions, String previousHashCode) {
+	public Block(List<Transaction1> transactions, String previousHashCode) {
 		this.transactions = transactions;
 		this.previousHashCode = previousHashCode;
 		this.timeStamp = new Date().getTime();
@@ -41,7 +43,7 @@ public class Block {
 		}
 
 		String total = previousHashCode + sb.toString() + Long.toString(timeStamp);
-		String calculatedhash = EncryptMethod.applySha256(total);
+		String calculatedhash = EncryptMethod2.applySha256(total);
 
 		return calculatedhash;
 	}
@@ -78,7 +80,7 @@ public class Block {
 		}
 
 		String total = previousHashCode + sb.toString() + Long.toString(timeStamp)+Integer.toString(nonce);
-		String calculatedMiningHash = EncryptMethod.applySha256(total);
+		String calculatedMiningHash = EncryptMethod2.applySha256(total);
 
 		return calculatedMiningHash;
 	}

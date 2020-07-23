@@ -1,1 +1,11 @@
 1595481114297	Move compilation units
+1595483770508	Rename package 'blockChain'
+1595483815001	Delete element
+1595485692049	Move compilation unit
+1595485698732	Copy compilation unit
+1595485721402	Rename type 'EncryptMethod'
+1595485735825	Rename type 'EncryptMethod'
+1595503089946	Rename type 'Transaction'
+1595503098065	Rename type 'Transcastion'
+1595504136529	Rename type 'ShowBlockSystem'
+1595506992101	Delete element

@@ -1,4 +1,4 @@
-package blockChain;
+package blockChain_test1;
 
 import java.util.ArrayList;
 import com.google.gson.GsonBuilder;
@@ -43,8 +43,8 @@ public class ShowBlockChainSystem_JSON {
 	public static void main(String[] args) {
 
 		//1
-		Transaction tx1_1 = new Transaction("1_1", "addressSender1", "addressRecipient1", 10);
-		ArrayList<Transaction> list1 = new ArrayList<Transaction>();
+		Transaction1 tx1_1 = new Transaction1("1_1", "addressSender1", "addressRecipient1", 10);
+		ArrayList<Transaction1> list1 = new ArrayList<Transaction1>();
 		list1.add(tx1_1);
 		Block genesisBlock = new Block(list1, "init");//起始區塊，給值init!!
 		System.out.println("Hash for block 1 : " + genesisBlock.hashCode);
@@ -57,10 +57,10 @@ public class ShowBlockChainSystem_JSON {
 
 		
 		//2
-		Transaction tx2_1 = new Transaction("2_1", "addressSender2", "addressRecipient2", 50);
-		Transaction tx2_2 = new Transaction("2_2", "addressSender1", "addressRecipient5", 40);
-		Transaction tx2_3 = new Transaction("2_3", "addressSender1", "addressRecipient5", 1);
-		ArrayList<Transaction> list2 = new ArrayList<Transaction>();
+		Transaction1 tx2_1 = new Transaction1("2_1", "addressSender2", "addressRecipient2", 50);
+		Transaction1 tx2_2 = new Transaction1("2_2", "addressSender1", "addressRecipient5", 40);
+		Transaction1 tx2_3 = new Transaction1("2_3", "addressSender1", "addressRecipient5", 1);
+		ArrayList<Transaction1> list2 = new ArrayList<Transaction1>();
 		list2.add(tx2_1);
 		list2.add(tx2_2);
 		list2.add(tx2_3);
@@ -73,9 +73,9 @@ public class ShowBlockChainSystem_JSON {
 		System.out.println("");
 		
 		//3
-		Transaction tx3_1 = new Transaction("3_1", "addressSender3", "addressRecipient3", 24);
-		Transaction tx3_2 = new Transaction("3_2", "addressSender3", "addressRecipient3", 6);
-		ArrayList<Transaction> list3 = new ArrayList<Transaction>();
+		Transaction1 tx3_1 = new Transaction1("3_1", "addressSender3", "addressRecipient3", 24);
+		Transaction1 tx3_2 = new Transaction1("3_2", "addressSender3", "addressRecipient3", 6);
+		ArrayList<Transaction1> list3 = new ArrayList<Transaction1>();
 		list3.add(tx3_1);
 		list3.add(tx3_2);
 		Block thirdBlock = new Block(list3, secondBlock.hashCode);

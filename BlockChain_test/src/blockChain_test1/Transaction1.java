@@ -1,4 +1,4 @@
-package blockChain;
+package blockChain_test1;
 
 import java.util.Date;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import org.json.JSONObject;
 
 
-public class Transaction {
+public class Transaction1 {
 
 	private String id;
 
@@ -16,7 +16,7 @@ public class Transaction {
 
 	private int amount;
 
-	public Transaction() {
+	public Transaction1() {
 	}
 
 	/**
@@ -25,7 +25,7 @@ public class Transaction {
 	 * @param recipient
 	 * @param amount
 	 */
-	public Transaction(String id, String sender, String recipient, int amount) {
+	public Transaction1(String id, String sender, String recipient, int amount) {
 		this.id = id;
 		this.sender = sender;
 		this.recipient = recipient;

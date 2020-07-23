@@ -1,4 +1,4 @@
-package blockChain;
+package blockChain_test1;
 
 import java.security.MessageDigest;
 
@@ -7,7 +7,7 @@ import java.security.MessageDigest;
  * SHA（Secure Hash Algorithm）安全散列算法
  * 
  */
-public class EncryptMethod {
+public class EncryptMethod1 {
 
 	public static String applySha256(String input) {
 		try {
