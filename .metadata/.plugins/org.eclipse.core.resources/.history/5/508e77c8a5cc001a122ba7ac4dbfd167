@@ -1,0 +1,35 @@
+package blockChain;
+
+import java.util.ArrayList;
+
+
+/**
+ * æ¸¬è©¦??å¡Šé?ˆç?„hash
+ */
+public class ShowBlockChainSystem_BlockHash {
+	public static void main(String[] args) {
+		
+		Transaction tx1 = new Transaction("1","addressSender1","addressRecipient1",10);
+		ArrayList<Transaction> list1 = new ArrayList<Transaction>();
+		list1.add(tx1);
+		Block genesisBlock = new Block(list1, "init");//?‰µå§‹ç¬¬ä¸?å¡Šï?Œçµ¦?‹init
+		System.out.println("Hash for block 1 : " + genesisBlock.hashCode);
+		
+		
+		
+		Transaction tx2 = new Transaction("2","addressSender2","addressRecipient2",50);
+		ArrayList<Transaction> list2 = new ArrayList<Transaction>();
+		list1.add(tx2);
+		Block secondBlock = new Block(list2, genesisBlock.hashCode);
+		System.out.println("Hash for block 2 : " + secondBlock.hashCode);
+		
+		
+		
+
+		Transaction tx3 = new Transaction("3","addressSender3","addressRecipient3",24);
+		ArrayList<Transaction> list3 = new ArrayList<Transaction>();
+		list1.add(tx3);
+		Block thirdBlock = new Block(list3, secondBlock.hashCode);
+		System.out.println("Hash for block 3 : " + thirdBlock.hashCode);
+	}
+}

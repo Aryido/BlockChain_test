@@ -1,0 +1,35 @@
+package blockChain;
+
+import java.security.MessageDigest;
+
+
+/**
+ * SHA-256加密
+ */
+public class EncryptMethod {
+
+	public static String applySha256(String input) {
+		try {
+			
+			//SHA256可以使用jdk中的 MessageDigest class生成。
+			MessageDigest digest = MessageDigest.getInstance("SHA-256");
+			
+			//開始把輸入的文字加密 
+			byte[] hash = digest.digest(input.getBytes("UTF-8"));
+			StringBuffer hexString = new StringBuffer(); 
+			for (byte digtal:hash) {
+				String hex = Integer.toHexString(0xff & digtal);
+				if (hex.length() == 1)
+					hexString.append('0');
+				hexString.append(hex);
+			}
+			
+			return hexString.toString();
+			
+		} catch (Exception e) {
+			
+			throw new RuntimeException(e);
+			
+		}
+	}
+}

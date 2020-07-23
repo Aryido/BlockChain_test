@@ -1,0 +1,48 @@
+package blockChain;
+
+import java.util.Date;
+import java.util.List;
+
+import org.json.JSONObject;
+
+/**
+ * äº¤æ??
+ */
+public class Transaction {
+
+	private String id;
+
+	/**
+	 * äº¤æ?“å‚³?æ–¹?Œ¢??…åœ°??
+	 */
+	private String sender;
+
+	/**
+	 * äº¤æ?“æ¥?”¶?–¹?Œ¢??…åœ°??
+	 */
+	private String recipient;
+
+	/**
+	 * äº¤æ?“é?‘é??
+	 */
+	private int amount;
+
+	public Transaction() {
+	}
+
+	/**
+	 * @param id
+	 * @param sender
+	 * @param recipient
+	 * @param amount
+	 */
+	public Transaction(String id, String sender, String recipient, int amount) {
+		this.id = id;
+		this.sender = sender;
+		this.recipient = recipient;
+		this.amount = amount;
+	}
+
+	
+
+}

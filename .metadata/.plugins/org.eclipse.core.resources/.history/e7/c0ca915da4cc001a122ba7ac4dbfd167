@@ -1,0 +1,35 @@
+package blockChain;
+
+import java.security.MessageDigest;
+
+
+/**
+ * SHA-256??†Â??
+ */
+public class EncryptMethod {
+
+	public static String applySha256(String input) {
+		try {
+			
+			//SHA256?èØ‰ª•‰Ωø?î®jdk‰∏≠Á?? MessageDigest class??üÊ?ê„??
+			MessageDigest digest = MessageDigest.getInstance("SHA-256");
+			
+			//??ãÂ?ãÊ?äËº∏?Ö•??ÑÊ?áÂ?óÂ?†Â?? 
+			byte[] hash = digest.digest(input.getBytes("UTF-8"));
+			StringBuffer hexString = new StringBuffer(); 
+			for (byte digtal:hash) {
+				String hex = Integer.toHexString(0xff & digtal);
+				if (hex.length() == 1)
+					hexString.append('0');
+				hexString.append(hex);
+			}
+			
+			return hexString.toString();
+			
+		} catch (Exception e) {
+			
+			throw new RuntimeException(e);
+			
+		}
+	}
+}
