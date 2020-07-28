@@ -3,15 +3,14 @@ package blockChain_test1;
 import java.util.ArrayList;
 
 
-/**
- * 測試??塊�?��?�hash
- */
 public class ShowBlockChainSystem_BlockHash {
 	public static void main(String[] args) {
 		
-		Transaction1 tx1 = new Transaction1("1","addressSender1","addressRecipient1",10);
+		Transaction1 tx1_1 = new Transaction1("1_1","addressSender1","addressRecipient5",10);
+		Transaction1 tx1_2 = new Transaction1("1_2","addressSender1","addressRecipient5",3);
 		ArrayList<Transaction1> list1 = new ArrayList<Transaction1>();
-		list1.add(tx1);
+		list1.add(tx1_1);
+		list1.add(tx1_2);
 		Block genesisBlock = new Block(list1, "init");//起始區塊，給值init!!
 		System.out.println("Hash for block 1 : " + genesisBlock.hashCode);
 		

@@ -32,7 +32,7 @@ public class ShowBlockChainSystem_JSON {
 				
 				System.out.println(currentBlock.hashCode);
 				System.out.println(currentBlock.calculateHash());
-				System.out.println("目前區塊的hashCode，和目前區塊算出來的hashCode!");
+				System.out.println("目前區塊的hashCode，和目前區塊算出來的hashCode不一樣!");
 				return false;
 			}
 		}
